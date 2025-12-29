@@ -11,3 +11,5 @@ export const categories = [
   "Outdoor",
   "Garden",
 ] as const;
+
+export type Category = (typeof categories)[number];

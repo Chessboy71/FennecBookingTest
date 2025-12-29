@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { categories } from "../../../utils";
+import { categories, Category } from "../utils";
 
 const FilterList = ({
   filter,
   setFilter,
 }: {
-  filter: string;
-  setFilter: (filter: string) => void;
+  filter: Category;
+  setFilter: (filter: Category) => void;
 }) => {
   return (
     <div className="flex flex-row gap-0 pt-4 overflow-x-auto no-scrollbar [scrollbar-width:none]">
-      {categories.map((category) => (
+      {categories.map((category: Category) => (
         <button
           key={category}
           onClick={() => setFilter(category)}

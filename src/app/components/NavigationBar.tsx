@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import navIcon from "../../../public/nav-phone.svg";
+import navIcon from "@/../public/icons/nav-phone.svg";
 import { useState } from "react";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
