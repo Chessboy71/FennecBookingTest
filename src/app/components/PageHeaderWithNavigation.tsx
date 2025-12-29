@@ -9,6 +9,7 @@ const PageHeaderWithNavigation = ({
 }) => {
   const titleChanged = title.split(" ");
   const lastWord = titleChanged.pop();
+
   return (
     <div
       className={`flex flex-row w-full justify-between items-center text-black my-4 ${

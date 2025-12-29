@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Button from "../Button";
-import { Product } from "@/app/page";
+import { Product } from "@/app/utils";
+import Link from "next/link";
 
 const ProductCard = ({
   product,
@@ -31,15 +32,17 @@ const ProductCard = ({
       </div>
       <h2 className="font-bold text-2xl">{product.name}</h2>
       <p className="text-sm text-gray-400 text-center">{product.description}</p>
-      <Button price={`$${product.price}`}>
-        <Image
-          src={"/icons/trashCan.svg"}
-          alt={product.name}
-          width={20}
-          height={20}
-        />
-        Add to cart
-      </Button>
+      <Link href={`/products/${product.id}`} className="w-full">
+        <Button price={`$${product.price}`}>
+          <Image
+            src={"/icons/trashCan.svg"}
+            alt={product.name}
+            width={20}
+            height={20}
+          />
+          Add to cart
+        </Button>
+      </Link>
     </div>
   );
 };

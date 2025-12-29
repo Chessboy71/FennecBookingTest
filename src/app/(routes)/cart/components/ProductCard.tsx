@@ -1,6 +1,10 @@
-import { Product } from "@/app/page";
+import { Product } from "@/app/utils";
 import Image from "next/image";
-const ProductCard = ({ product }: { product: Product }) => {
+const ProductCard = ({
+  product,
+}: {
+  product: Product & { quantity: number };
+}) => {
   return (
     <div className="flex flex-row gap-4  items-center w-full">
       <Image
@@ -16,7 +20,9 @@ const ProductCard = ({ product }: { product: Product }) => {
       />
       <div>
         <h2 className="text-lg font-bold">{product.name}</h2>
-        <p className="text-gray-600 text-xs mt-1">1 piece</p>
+        <p className="text-gray-600 text-xs mt-1">
+          {product.quantity} {product.quantity === 1 ? "piece" : "pieces"}
+        </p>
       </div>
 
       <p className="font-semibold mt-2 ml-auto">${product.price.toFixed(2)}</p>

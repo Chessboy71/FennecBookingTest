@@ -20,11 +20,11 @@ const Button = ({
 
   return (
     <button
-      className={`w-full flex flex-row justify-between cursor-pointer py-4 px-6 rounded-full group font-medium ${buttonClasses} my-2 active:scale-95 transition-all duration-200`}
+      className={`w-full flex flex-row justify-between items-center cursor-pointer py-4 px-4 rounded-full group font-medium ${buttonClasses} my-2 active:scale-95 transition-all duration-200`}
       onClick={onClick}
     >
       {variant === "primary" ? (
-        <span className="flex flex-row gap-2 group-hover:gap-3 transition-all duration-200">
+        <span className="flex flex-row items-center gap-2 group-hover:gap-3 transition-all duration-200">
           {children}
         </span>
       ) : (
