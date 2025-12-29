@@ -7,7 +7,7 @@ const ProductCart = ({
   items: (Product & { quantity: number })[];
 }) => {
   return (
-    <div className="flex flex-col w-screen gap-2 px-4 my-4 max-h-[464px] overflow-y-auto">
+    <div className="flex flex-col w-screen gap-2 px-4 my-4 max-h-116 overflow-y-auto">
       {items.map((product, index) => (
         <div key={product.id}>
           <ProductCard product={product} />

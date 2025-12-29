@@ -3,9 +3,8 @@
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import navIcon from "../../../../public/icons/ArrowRight.svg";
-import { Category } from "../../utils";
+import { Category, Product } from "../../utils";
 import ProductCard from "./ProductCard";
-import { Product } from "@/app/page";
 
 const Products = ({
   filter,
