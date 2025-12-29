@@ -1,24 +1,37 @@
+"use client";
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: "primary" | "secondary";
+  price?: string;
+};
+
 const Button = ({
   children,
-  type = "primary",
+  variant = "primary",
   price,
-}: {
-  children: React.ReactNode;
-  type?: "primary" | "secondary";
-  price?: string;
-}) => {
+  onClick,
+}: ButtonProps) => {
   const primaryClasses = "bg-black text-white hover:bg-gray-900";
-  const secondaryClasses = "bg-gray-200 text-black";
+  const secondaryClasses =
+    "bg-white/50 text-black border border-black hover:bg-white/70";
 
-  const buttonClasses = type === "primary" ? primaryClasses : secondaryClasses;
+  const buttonClasses =
+    variant === "primary" ? primaryClasses : secondaryClasses;
 
   return (
     <button
-      className={`w-full flex flex-row justify-between cursor-pointer py-4 px-6 rounded-full group font-medium ${buttonClasses} my-2`}
+      className={`w-full flex flex-row justify-between cursor-pointer py-4 px-6 rounded-full group font-medium ${buttonClasses} my-2 active:scale-95 transition-all duration-200`}
+      onClick={onClick}
     >
-      <span className="flex flex-row gap-2 group-hover:gap-3 transition-all duration-200">
-        {children}
-      </span>
+      {variant === "primary" ? (
+        <span className="flex flex-row gap-2 group-hover:gap-3 transition-all duration-200">
+          {children}
+        </span>
+      ) : (
+        <div className="flex flex-row justify-between items-center w-full">
+          {children}
+        </div>
+      )}
       <p>{price}</p>
     </button>
   );

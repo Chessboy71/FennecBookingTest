@@ -93,7 +93,7 @@ const Products = ({
 
   return (
     <div className="mt-8 w-full">
-      <header className="flex justify-between items-center">
+      <header className="flex justify-between items-center px-4">
         <h1 className="text-2xl">{filter} Collections</h1>
         <div className="flex gap-2">
           <button onClick={handlePrev} className="p-1">

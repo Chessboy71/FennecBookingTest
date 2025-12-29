@@ -9,7 +9,7 @@ const FilterList = ({
   setFilter: (filter: Category) => void;
 }) => {
   return (
-    <div className="flex flex-row gap-0 pt-4 overflow-x-auto no-scrollbar [scrollbar-width:none]">
+    <div className="flex flex-row gap-0 pt-4 overflow-x-auto no-scrollbar [scrollbar-width:none] px-4">
       {categories.map((category: Category) => (
         <button
           key={category}
