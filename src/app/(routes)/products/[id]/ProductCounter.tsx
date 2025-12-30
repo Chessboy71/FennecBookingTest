@@ -38,9 +38,9 @@ const ProductCheckout = ({ product }: { product: Product }) => {
 
   return (
     <>
-      <div className="flex flex-row w-full items-center justify-between gap-4 mt-4 -translate-x-2">
+      <div className="flex flex-row w-full items-center justify-between gap-2 overflow-x-hidden">
         <button
-          className="bg-[url('/leftclicker.svg')] lg:bg-secondary bg-contain rounded-full w-24 lg:h-24 lg:translate-x-6 h-56 flex text-6xl items-center justify-center cursor-pointer active:scale-95 transition-all duration-200"
+          className="bg-[url('/leftclicker.svg')] lg:bg-secondary bg-contain rounded-full w-24 lg:h-24 -translate-x-2 lg:translate-x-6 h-56 flex text-6xl items-center justify-center cursor-pointer active:scale-95 transition-all duration-200"
           onClick={() => setCurrentCount(Math.max(0, currentCount - 1))}
         >
           <p className="-translate-y-2">-</p>

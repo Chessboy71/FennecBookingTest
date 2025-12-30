@@ -11,7 +11,7 @@ const CartPage = () => {
 
   return (
     <main className="bg-linear-to-b from-white to-30% to-secondary lg:flex lg:justify-center">
-      <div className="min-h-screen lg:w-xl flex flex-col items-center font-sans px-4">
+      <div className="h-dvh lg:w-xl flex flex-col items-center font-sans px-4">
         <PageHeaderWithNavigation
           title={CartPageTitle}
           cartCount={cartItems.length}

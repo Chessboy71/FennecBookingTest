@@ -26,7 +26,7 @@ const ProductCard = ({
         ${previous ? "-translate-x-8 rotate-6 z-0 blur-[0.5px]" : ""}
         ${next ? "translate-x-8 -rotate-6 z-0 blur-[0.5px]" : ""}`}
     >
-      <div className="mb-2 bg-gray-200 rounded-2xl max-h-[60vw] overflow-hidden">
+      <div className="mb-2 bg-gray-200 rounded-2xl max-h-[50vw] overflow-hidden">
         <Image
           src={product.imageUrl}
           alt={product.name}
