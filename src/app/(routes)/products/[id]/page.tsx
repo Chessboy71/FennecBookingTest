@@ -10,9 +10,9 @@ const ProductPage = async ({ params }: { params: { id: string } }) => {
   const product = plantProducts.find((product: Product) => product.id === id);
 
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans bg-white">
+    <div className="flex min-h-screen items-center justify-center font-sans ">
       {product ? (
-        <main className="py-6 min-h-screen w-screen overflow-hidden">
+        <main className="py-6 min-h-screen w-screen overflow-hidden bg-white lg:max-w-2xl">
           <PageHeaderWithNavigation title={product?.name || ""} />
           {/* Product showcase */}
           <div className="flex flex-col items-center justify-center">

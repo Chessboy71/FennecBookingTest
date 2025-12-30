@@ -16,7 +16,7 @@ const PageHeaderWithNavigation = ({
         cartCount ? "" : "px-4"
       }`}
     >
-      <h2 className="text-4xl w-2/3">
+      <h2 className="text-4xl lg:text-7xl w-2/3">
         {titleChanged.join(" ")} <span className="font-bold">{lastWord}</span>
       </h2>
       {cartCount ? (

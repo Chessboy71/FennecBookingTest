@@ -17,8 +17,12 @@ const ProductCard = ({
 }) => {
   return (
     <div
-      className={`bg-white w-[70vw] p-4 rounded-3xl flex flex-col items-center gap-2 shrink-0 snap-center transition-all duration-500 
-        ${active ? "scale-100 opacity-100 z-50" : " scale-95 opacity-60"}
+      className={`bg-white w-[70vw] lg:w-80 p-4 rounded-3xl flex flex-col items-center gap-2 shrink-0 snap-center transition-all duration-500 
+        ${
+          active
+            ? "scale-100 opacity-100 z-50"
+            : " scale-95 lg:scale-100 opacity-60 lg:opacity-100 lg:mx-2"
+        }
         ${previous ? "-translate-x-8 rotate-6 z-0 blur-[0.5px]" : ""}
         ${next ? "translate-x-8 -rotate-6 z-0 blur-[0.5px]" : ""}`}
     >

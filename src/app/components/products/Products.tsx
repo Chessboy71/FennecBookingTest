@@ -93,7 +93,7 @@ const Products = ({
   return (
     <div className="my-8 w-full">
       <header className="flex justify-between items-center px-4">
-        <h1 className="text-2xl">{filter} Collections</h1>
+        <h1 className="text-2xl lg:text-4xl">{filter} Collections</h1>
         <div className="flex gap-2">
           <button onClick={handlePrev} className="p-1">
             <Image
@@ -112,7 +112,7 @@ const Products = ({
 
       <div
         ref={containerRef}
-        className="mt-4 w-full flex items-center overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth [scrollbar-width:none]"
+        className="mt-4 w-full flex items-center overflow-x-auto pb-4 snap-x snap-mandatory [scrollbar-width:none]"
       >
         {products.length > 0 ? (
           infiniteProducts.map((product: Product, index) => (

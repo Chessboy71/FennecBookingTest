@@ -25,19 +25,23 @@ export default function Home() {
   if (isLoading) return <RootSkeleton />;
   return (
     <div className="flex items-center justify-center font-sans bg-linear-to-b from-white to-30% to-secondary">
-      <main className="py-6 h-screen w-screen overflow-hidden">
-        <PageHeaderWithNavigation title="Let’s Make our lives Greener" />
-        <FilterList filter={filter} setFilter={setFilter} />
-        <Products
-          filter={filter}
-          products={
-            filter == "All"
-              ? plantProducts
-              : plantProducts.filter(
-                  (plant: Product) => plant.category == filter
-                )
-          }
-        />
+      <main className="py-6 h-screen w-screen lg:flex lg:flex-row lg:max-w-6xl overflow-hidden">
+        <div className="w-full lg:w-1/2 lg:h-full flex">
+          <PageHeaderWithNavigation title="Let’s Make our lives Greener" />
+        </div>
+        <div className="w-full lg:w-1/2 h-full overflow-y-scroll lg:flex lg:flex-col lg:justify-center lg:px-0">
+          <FilterList filter={filter} setFilter={setFilter} />
+          <Products
+            filter={filter}
+            products={
+              filter == "All"
+                ? plantProducts
+                : plantProducts.filter(
+                    (plant: Product) => plant.category == filter
+                  )
+            }
+          />
+        </div>
         <FloatingCart />
       </main>
     </div>

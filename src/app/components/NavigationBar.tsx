@@ -10,7 +10,7 @@ const NavigationBar = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <nav className="flex space-x-4">
+    <nav className="flex space-x-4 lg:hidden">
       <button
         className="border border-black py-3 px-1 rounded-lg hover:bg-gray-100 transition cursor-pointer relative"
         onClick={() => setActive(!active)}

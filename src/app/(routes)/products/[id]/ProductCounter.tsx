@@ -40,21 +40,21 @@ const ProductCheckout = ({ product }: { product: Product }) => {
     <>
       <div className="flex flex-row w-full items-center justify-between gap-4 mt-4 -translate-x-2">
         <button
-          className="bg-[url('/leftclicker.svg')] bg-contain rounded-full w-24 h-56 flex text-6xl items-center justify-center cursor-pointer active:scale-95 transition-all duration-200"
+          className="bg-[url('/leftclicker.svg')] lg:bg-secondary bg-contain rounded-full w-24 lg:h-24 lg:translate-x-6 h-56 flex text-6xl items-center justify-center cursor-pointer active:scale-95 transition-all duration-200"
           onClick={() => setCurrentCount(Math.max(0, currentCount - 1))}
         >
           <p className="-translate-y-2">-</p>
         </button>
         <span className="font-bold text-4xl">{currentCount}</span>
         <button
-          className="bg-[url('/rightClicker.svg')] bg-contain rounded-full w-24 h-56 flex text-6xl items-center justify-center translate-x-4 cursor-pointer active:scale-95 transition-all duration-200"
+          className="bg-[url('/rightClicker.svg')] lg:bg-secondary bg-contain rounded-full w-24 h-56 lg:h-24 lg:-translate-x-6 flex text-6xl items-center justify-center translate-x-4 cursor-pointer active:scale-95 transition-all duration-200"
           onClick={() => setCurrentCount(currentCount + 1)}
         >
-          <p className="-translate-y-2">+</p>
+          <p className="-translate-y-2 lg:-translate-y-1">+</p>
         </button>
       </div>
 
-      <div className="w-full px-4 mb-4">
+      <div className="w-full px-4 mb-4 lg:mt-24">
         <Button price={`$${product?.price || 0}`} onClick={handleAddToCart}>
           <div className="h-10 w-10 bg-primary rounded-full flex flex-row items-center justify-center">
             <Image

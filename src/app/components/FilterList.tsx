@@ -9,12 +9,12 @@ const FilterList = ({
   setFilter: (filter: Category) => void;
 }) => {
   return (
-    <div className="flex flex-row gap-0 pt-4 overflow-x-auto no-scrollbar [scrollbar-width:none] px-4">
+    <div className="flex gap-0 pt-4 px-4 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing select-none touch-pan-x overscroll-x-contain scroll-smooth [scrollbar-width:none]">
       {categories.map((category: Category) => (
         <button
           key={category}
           onClick={() => setFilter(category)}
-          className="relative px-4 py-2 shrink-0 text-xs font-bold w-auto rounded-full border-4 bg-white border-white"
+          className="relative px-4 py-2 shrink-0 text-xs font-bold w-auto rounded-full border-4 bg-white border-white hover:cursor-grab "
         >
           {category === filter && (
             <motion.span

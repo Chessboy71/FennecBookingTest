@@ -6,9 +6,9 @@ const FlowingCart = () => {
   const items = useCartStore((state) => state.items);
   return (
     <Link href={`/cart`}>
-      <div className="flex flex-col items-center w-screen h-auto bg-[url(/floatingCart.svg)] bg-center bg-cover bg-no-repeat group cursor-pointer fixed bottom-0 left-0 z-50">
+      <div className="flex flex-col items-center w-screen h-auto bg-[url(/floatingCart.svg)] bg-center bg-cover bg-no-repeat group cursor-pointer fixed bottom-0 left-0 lg:bg-primary lg:rounded-full lg:w-xl lg:bottom-2  lg:-translate-x-1/2 lg:left-1/2 z-50">
         {/* Top drag indicator */}
-        <div className=" w-16 h-1.5 rounded-full bg-primary translate-y-2 group-hover:translate-y-0 duration-200 transition-all" />
+        <div className="w-16 h-1.5 rounded-full bg-primary translate-y-2 group-hover:translate-y-0 duration-200 transition-all lg:hidden" />
 
         <div className="flex items-center justify-between rounded-full px-2 py-5 w-full">
           {/* Left section */}

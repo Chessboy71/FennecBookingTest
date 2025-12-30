@@ -7,7 +7,7 @@ const ProductCart = ({
   items: (Product & { quantity: number })[];
 }) => {
   return (
-    <div className="flex flex-col w-screen gap-2 px-4 my-4 max-h-116 overflow-y-auto">
+    <div className="flex flex-col w-screen lg:w-full gap-2 px-4 my-4 max-h-116 lg:max-h-[60vh] [scrollbar-width:thin] [scrollbar-color:transparent] hover:cursor-crosshair overflow-y-auto">
       {items.map((product, index) => (
         <div key={product.id}>
           <ProductCard product={product} />
